@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Full Page Slider</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+  <button id="left-navigator"></button>
+  <button id="right-navigator">Start</button>
+  <div id="full-slider">
+    <div id="welcome-page" class="slide-panel" style="left: 0;">
+      <div class="overlay">
+        <div style="color: white; font-size: 62pt; font-family: 'Dancing Script', cursive; text-align: center;">
+          BẠN CÓ BIẾT?
+          <br />
+          Loại táo Washington nào phù hợp với bạn?
+        </div>
+      </div>
+    </div>
+
+    <div id="acidity-page" class="slide-panel" style="left: 25%;">
+      <div class="overlay">
+        <div id="gauge">
+          <div class="level-marker marker-1"></div>
+          <div class="level-marker marker-2"></div>
+          <div class="level-marker marker-3"></div>
+          <div class="level-marker marker-4"></div>
+          <div class="level-marker marker-5"></div>
+          <div class="level-marker marker-6"></div>
+          <div class="level-marker marker-7"></div>
+          <div id="sweetness-meter">
+            <img id="logo-img" src="./assets/images/78668462_996556057365521_6465972100468310016_n.png" />
+          </div>
+          <div class="dial">
+            <div id="arrow-container" class="inner animate-start">
+              <div class="arrow"></div>
+            </div>
+          </div>
+          <div class="less">Ít ngọt<br />Hơn</div>
+          <div class="more">Ngọt<br />Hơn</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="brittleness-page" class="slide-panel" style="left: 50%;">
+      <div class="overlay">
+        <div style="color: white; font-size: 82pt;">Chọn độ giòn từ 1 đến 5</div>
+        <div>
+          <label class="container">1 (Giòn xốp)
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">2
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">3
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">4
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="container">5 (Giòn rụm)
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div id="result-page" class="slide-panel" style="left: 75%;">
+      <div class="overlay">
+        <div style="color: white; font-size: 82pt;">Kết quả của bạn</div>
+        <img id="result-img" />
+      </div>
+
+    </div>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+"></script>
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
+* {
+  font-family: "Dancing Script", cursive;
+  touch-action: manipulation;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  border-radius: 0;
+  border-style: none;
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+#full-slider {
+  overflow: hidden;
+  position: relative;
+  width: 400vw;
+  height: 100vh;
+}
+
+#full-slider .slide-panel {
+  position: absolute;
+  width: 25%;
+  height: 100vh;
+  /* visibility: hidden; */
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* #full-slider .slide-panel.active {
+  visibility: visible;
+} */
+
+#right-navigator {
+  right: 50px;
+}
+
+#left-navigator {
+  left: 50px;
+  visibility: hidden;
+}
+
+#left-navigator,
+#right-navigator {
+  color: white;
+  bottom: 50px;
+  position: absolute;
+  min-width: 132px;
+  height: 35px;
+  z-index: 1;
+  font-size: 28pt;
+}
+
+#welcome-page,
+#acidity-page,
+#brittleness-page,
+#result-page {
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#welcome-page {
+  background-image: url("../images/bg-1.jpg");
+}
+#acidity-page {
+  background-image: url("../images/bg-2.jpg");
+}
+#brittleness-page {
+  background-image: url("../images/bg-3.jpg");
+  color: white;
+}
+#result-page {
+  background-image: url("../images/bg-4.jpg");
+}
+
+.overlay {
+  background-color: #00000055;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#gauge {
+  position: relative;
+  margin: auto;
+  height: 400px;
+  width: 820px;
+  border-radius: 800px 800px 0 0;
+  -moz-border-radius: 800px 800px 0 0;
+  -webkit-border-radius: 800px 800px 0 0;
+  background: #91ed2f; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #91ed2f 0%,
+    #ecef2d 50%,
+    #fc0400 100%
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, #91ed2f),
+    color-stop(50%, #ecef2d),
+    color-stop(100%, #fc0400)
+  ); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(
+    left,
+    #91ed2f 0%,
+    #ecef2d 50%,
+    #fc0400 100%
+  ); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(
+    left,
+    #91ed2f 0%,
+    #ecef2d 50%,
+    #fc0400 100%
+  ); /* Opera 11.10+ */
+  background: -ms-linear-gradient(
+    left,
+    #91ed2f 0%,
+    #ecef2d 50%,
+    #fc0400 100%
+  ); /* IE10+ */
+  background: linear-gradient(
+    to right,
+    #91ed2f 0%,
+    #ecef2d 50%,
+    #fc0400 100%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91ed2f', endColorstr='#fc0400',GradientType=1 ); /* IE6-9 */
+}
+.dial {
+  background-color: #000;
+  overflow: hidden;
+}
+.dial .inner {
+  position: absolute;
+  bottom: -303px;
+  left: 101px;
+  border-radius: 70%;
+  width: 77%;
+  height: 155%;
+}
+.arrow {
+  width: 0px;
+  height: 0;
+  position: absolute;
+  bottom: -59px;
+  left: 274px;
+  border-left: 48px solid transparent;
+  border-right: 48px solid transparent;
+  border-bottom: 60px solid black;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+#sweetness-meter {
+  position: absolute;
+  bottom: 0;
+  margin: 0 12%;
+  height: 312px;
+  width: 620px;
+  border-radius: 360px 360px 0 0;
+  -moz-border-radius: 360px 360px 0 0;
+  -webkit-border-radius: 360px 360px 0 0;
+  background: #f2f2f2;
+  border-top: 8px solid black;
+  border-right: 8px solid black;
+  border-left: 8px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+#sweetness-meter #logo-img {
+  width: 300px;
+}
+
+.level-marker {
+  position: absolute;
+  background: white;
+  width: 20px;
+  height: 4px;
+}
+.marker-1 {
+  bottom: 40px;
+  left: 4px;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  transform: rotate(10deg);
+}
+.marker-2 {
+  bottom: 180px;
+  left: 48px;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+.marker-3 {
+  bottom: 320px;
+  left: 172px;
+  -ms-transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+.marker-4 {
+  top: 8px;
+  left: 400px;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.marker-5 {
+  bottom: 320px;
+  right: 172px;
+  -ms-transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+}
+.marker-6 {
+  bottom: 180px;
+  right: 48px;
+  -ms-transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+.marker-7 {
+  bottom: 40px;
+  right: 4px;
+  -ms-transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  transform: rotate(-10deg);
+}
+.less,
+.more {
+  text-transform: uppercase;
+  font-size: 24pt;
+  text-align: center;
+  position: absolute;
+  color: white;
+  line-height: 24pt;
+}
+.less {
+  bottom: -100px;
+}
+.more {
+  bottom: -100px;
+  right: 0;
+}
+.animate-start {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+.animate-red-delicious {
+  transform: rotate(160deg);
+  -webkit-transform: rotate(160deg);
+  animation-name: red-delicious-meter;
+  animation-duration: 3.5s;
+  animation-timing-function: ease-out;
+  -webkit-animation-name: red-delicious-meter;
+  -webkit-animation-duration: 3.5s;
+  -webkit-animation-timing-function: ease-out;
+}
+
+#arrow-container {
+  animation-duration: 3.5s;
+  animation-timing-function: ease-out;
+  -webkit-animation-duration: 3.5s;
+  -webkit-animation-timing-function: ease-out;
+}
+/* @-webkit-keyframes red-delicious-meter {
+  from {
+    transform: rotate(110deg);
+    -webkit-transform: rotate(110deg);
+  }
+  to {
+    transform: rotate(160deg);
+    -webkit-transform: rotate(160deg);
+  }
+}
+@-ms-keyframes red-delicious-meter {
+  from {
+    transform: rotate(110deg);
+    -ms-transform: rotate(110deg);
+  }
+  to {
+    transform: rotate(160deg);
+    -ms-transform: rotate(160deg);
+  }
+}
+@keyframes red-delicious-meter {
+  from {
+    transform: rotate(110deg);
+    -moz-transform: rotate(110deg);
+  }
+  to {
+    transform: rotate(160deg);
+    -moz-transform: rotate(160deg);
+  }
+} */
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 28pt;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  margin-right: 10px;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 35px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 10px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+}
+
+#result-img {
+  width: 70%;
+}
