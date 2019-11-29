@@ -93,9 +93,9 @@ function angle(cx, cy, ex, ey) {
 }
 
 $("#gauge").click(function(e) {
-  var distanceFromCenter = 325;
+  var distanceFromCenter = 230;
   var xPos = e.clientX - parseInt($("#gauge").css("marginLeft"));
-  var yPos = e.clientY - parseInt($("#gauge").css("marginTop"));
+  var yPos = e.clientY -  $("#gauge").height();
   var xCenter = $("#gauge").width() / 2;
   var yCenter = $("#gauge").height();
   var distance = Math.hypot(xPos - xCenter, yPos - yCenter);
@@ -103,6 +103,10 @@ $("#gauge").click(function(e) {
     var originalAngle = angle(xPos, yPos, xCenter, yCenter);
     sweetnessLevel = originalAngle / 3;
     var angleToBeRotated = originalAngle + 90;
+    console.log(angleToBeRotated);
+    if(angleToBeRotated < 90){
+      angleToBeRotated = 90;
+    }
 
     $("#arrow-container").css(
       "transform",

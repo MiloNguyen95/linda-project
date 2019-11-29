@@ -99,12 +99,12 @@ button:focus {
 
 #gauge {
   position: relative;
-  margin: auto;
-  height: 400px;
-  width: 820px;
-  border-radius: 800px 800px 0 0;
-  -moz-border-radius: 800px 800px 0 0;
-  -webkit-border-radius: 800px 800px 0 0;
+  margin: 0 auto;
+  height: 300px;
+  width: 610px;
+  border-radius: 600px 600px 0 0;
+  -moz-border-radius: 600px 600px 0 0;
+  -webkit-border-radius: 600px 600px 0 0;
   background: #91ed2f; /* Old browsers */
   background: -moz-linear-gradient(
     left,
@@ -152,21 +152,21 @@ button:focus {
 }
 .dial .inner {
   position: absolute;
-  bottom: -303px;
-  left: 101px;
+  bottom: -220px;
+  left: 75px;
   border-radius: 70%;
-  width: 77%;
-  height: 155%;
+  width: 76%;
+  height: 154%;
 }
 .arrow {
   width: 0px;
   height: 0;
   position: absolute;
-  bottom: -59px;
-  left: 274px;
-  border-left: 48px solid transparent;
-  border-right: 48px solid transparent;
-  border-bottom: 60px solid black;
+  bottom: -30px;
+  left: 211px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid black;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
@@ -174,74 +174,74 @@ button:focus {
   position: absolute;
   bottom: 0;
   margin: 0 12%;
-  height: 312px;
-  width: 620px;
-  border-radius: 360px 360px 0 0;
-  -moz-border-radius: 360px 360px 0 0;
-  -webkit-border-radius: 360px 360px 0 0;
+  height: 238px;
+  width: 455px;
+  border-radius: 270px 270px 0 0;
+  -moz-border-radius: 270px 270px 0 0;
+  -webkit-border-radius: 270px 270px 0 0;
   background: #f2f2f2;
-  border-top: 8px solid black;
-  border-right: 8px solid black;
-  border-left: 8px solid black;
+  border-top: 6px solid black;
+  border-right: 6px solid black;
+  border-left: 6px solid black;
   display: flex;
   justify-content: center;
 }
 
 #sweetness-meter #logo-img {
-  width: 300px;
+  width: 225px;
 }
 
 .level-marker {
   position: absolute;
   background: white;
-  width: 20px;
-  height: 4px;
+  width: 15px;
+  height: 3px;
 }
 .marker-1 {
-  bottom: 40px;
-  left: 4px;
+  bottom: 30px;
+  left: 3px;
   -ms-transform: rotate(7deg);
   -webkit-transform: rotate(7deg);
   transform: rotate(10deg);
 }
 .marker-2 {
-  bottom: 180px;
-  left: 48px;
+  bottom: 135px;
+  left: 36px;
   -ms-transform: rotate(7deg);
   -webkit-transform: rotate(25deg);
   transform: rotate(25deg);
 }
 .marker-3 {
-  bottom: 320px;
-  left: 172px;
+  bottom: 236px;
+  left: 123px;
   -ms-transform: rotate(50deg);
   -webkit-transform: rotate(50deg);
   transform: rotate(50deg);
 }
 .marker-4 {
-  top: 8px;
-  left: 400px;
+  top: 6px;
+  left: 300px;
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .marker-5 {
-  bottom: 320px;
-  right: 172px;
+  bottom: 236px;
+  right: 123px;
   -ms-transform: rotate(-50deg);
   -webkit-transform: rotate(-50deg);
   transform: rotate(-50deg);
 }
 .marker-6 {
-  bottom: 180px;
-  right: 48px;
+  bottom: 135px;
+  right: 36px;
   -ms-transform: rotate(-25deg);
   -webkit-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
 .marker-7 {
-  bottom: 40px;
-  right: 4px;
+  bottom: 30px;
+  right: 3px;
   -ms-transform: rotate(-7deg);
   -webkit-transform: rotate(-7deg);
   transform: rotate(-10deg);
@@ -256,10 +256,10 @@ button:focus {
   line-height: 24pt;
 }
 .less {
-  bottom: -100px;
+  bottom: -75px;
 }
 .more {
-  bottom: -100px;
+  bottom: -75px;
   right: 0;
 }
 .animate-start {
@@ -268,16 +268,6 @@ button:focus {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
 }
-.animate-red-delicious {
-  transform: rotate(160deg);
-  -webkit-transform: rotate(160deg);
-  animation-name: red-delicious-meter;
-  animation-duration: 3.5s;
-  animation-timing-function: ease-out;
-  -webkit-animation-name: red-delicious-meter;
-  -webkit-animation-duration: 3.5s;
-  -webkit-animation-timing-function: ease-out;
-}
 
 #arrow-container {
   animation-duration: 3.5s;
@@ -285,36 +275,6 @@ button:focus {
   -webkit-animation-duration: 3.5s;
   -webkit-animation-timing-function: ease-out;
 }
-/* @-webkit-keyframes red-delicious-meter {
-  from {
-    transform: rotate(110deg);
-    -webkit-transform: rotate(110deg);
-  }
-  to {
-    transform: rotate(160deg);
-    -webkit-transform: rotate(160deg);
-  }
-}
-@-ms-keyframes red-delicious-meter {
-  from {
-    transform: rotate(110deg);
-    -ms-transform: rotate(110deg);
-  }
-  to {
-    transform: rotate(160deg);
-    -ms-transform: rotate(160deg);
-  }
-}
-@keyframes red-delicious-meter {
-  from {
-    transform: rotate(110deg);
-    -moz-transform: rotate(110deg);
-  }
-  to {
-    transform: rotate(160deg);
-    -moz-transform: rotate(160deg);
-  }
-} */
 
 /* Customize the label (the container) */
 .container {
